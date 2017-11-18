@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Tic Tac Toe</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+	<link href="Styles/tic-tac-toe.css" rel="stylesheet">
+	<link href="JQuery-UI/jquery-ui.theme.min.css" rel="stylesheet">
+	<link href="JQuery-UI/jquery-ui.min.css" rel="stylesheet">
+	<link href="JQuery-UI/jquery-ui.structure.min.css" rel="stylesheet">
+	<script src="Scripts/jquery-3.2.1.min.js"></script>
+	<script src="Scripts/jquery.easing.1.3.js"></script>
+	<script src="JQuery-UI/jquery-ui.min.js"></script>
+	<script src="Scripts/snap.svg-min.js"></script>
+
+	<script src="Scripts/tic-tac-toe.js"></script>
+</head>
+
+<body>
+	<div id="intro">
+		<div id="intro-form">
+			<img id="headphonesImg" src="Images/headphones2.png">
+			<span class="question">Would you like to hear some cool music while you play?</span>
+			<span class="small-print">( You may disable it at any time )</span>
+			<div class="button-container">
+				<button id="yesBtn">Yes</button>
+				<button id="nopeBtn">Nope</button>
+			</div>
+		</div>
+
+		<div id="loading">
+			Loading Music..
+		</div>
+
+		<div id="credits">
+			<span class="credit"><span id="developed-by">Devoloped By:</span> <span id="me">Shane Shoemate</span></span>
+			<span class="credit">Background from www.pixelstalk.net</span>
+			<span class="credit">Music: The Moth (Les Deux Love Orchestra Cover) - Aimee Mann</span>
+			<button id="start">Start</button>
+		</div>
+	</div>
+
+	<div id="main">
+
+		<svg id="game-name" width="256" height="100" />
+
+		<form id="game-form">
+			<span id="form-header">Game Settings</span>
+			<div id="form-main">
+				<div id="color-container" class="sub-menu-container">
+					<label for="color-container">Choose Your Color</label>
+					<span class="custom-radio-btn" name="#00FEC8" id="aqua"></span>
+					<span class="custom-radio-btn" name="#FF0066" id="pink"></span>
+					<span class="custom-radio-btn" name="#FFB300" id="orange"></span>
+					<span class="custom-radio-btn" name="#708D91" id="steel"></span>
+					<span class="custom-radio-btn" name="#FFFFFF" id="white"></span>
+				</div>
+				<div class="lower-menu-toggle">
+					<div class="sub-menu-container">
+						<label for="difficulty">Difficulty:</label>
+						<select id="difficulty">
+						<option value="0">Easy</option>
+						<option value="1">Medium</option>
+						<option value="2">Hard</option>
+					</select>
+					</div>
+					<div class="sub-menu-container">
+						<label for="your-piece">Your piece:</label>
+						<select id="your-piece">
+						<option value="0">X</option>
+						<option value="1">O</option>
+					</select>
+					</div>
+				</div>
+				<div id="start-game-box">
+					<button type="button" id="start-btn" class="ui-button">Start Game</button>
+				</div>
+			</div>
+
+		</form>
+
+		<div id="scores">
+			<div class="score">
+				<span id="player-score">Player: 0</span>
+				<span class="score-border" id="player-border"> </span>
+			</div>
+			<div class="score">
+				<span id="computer-score">Computer: 0</span>
+				<span class="score-border" id="computer-border"> </span>
+			</div>
+		</div>
+
+		<div id="tic-tac-toe-container">
+			<canvas width="280px" height="280px" id="tic-tac-toe-canvas"></canvas>
+
+			<div id="end-game">
+				<div id="results-container">
+					<span class="result">Tie</span>
+				</div>
+				<button type="button" id="reset-btn" class="ui-button">Reset</button><br>
+			</div>
+
+			<table id="tic-tac-toe-table">
+				<tr id="row1">
+					<td class="board-piece" id="00">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+					<td class="board-piece" id="01">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+					<td class="board-piece" id="02">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+				</tr>
+				<tr id="row2">
+					<td class="board-piece" id="10">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+					<td class="board-piece" id="11">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+					<td class="board-piece" id="12">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+				</tr>
+				<tr id="row3">
+					<td class="board-piece" id="20">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+					<td class="board-piece" id="21">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+					<td class="board-piece" id="22">
+						<svg style="max-height: 54px; max-width: 64px;" width="64" height="54" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</body>
+
+</html>
