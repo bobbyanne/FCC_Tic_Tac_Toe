@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "High Tide - Demo";
+  src: url("../font/High Tide - Demo") format("ttf")
+}
+
 body {
 	background-attachment: fixed;
 	margin: 0;
